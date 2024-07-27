@@ -46,7 +46,7 @@ function evaluateExpression(expression) {
             case "÷":
                 switch(nextNumber) {
                     case 0:
-                    return displayDiv.textContent = "invalid operation";
+                    return displayDiv.textContent = 0;
                 }
                 result /= nextNumber;
                 break;
@@ -54,7 +54,7 @@ function evaluateExpression(expression) {
                 result = parseFloat(tokens[i - 1]) / 100;
                 break;
             default:
-                return displayDiv.textContent = "error";
+                return displayDiv.textContent = 0;
         }
 
         // check if it contains a decimal point
